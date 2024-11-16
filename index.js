@@ -5,13 +5,13 @@ function createFooterLinksCTA() {
     return linksFooter;
 }
 function initializeComponentSwap() {
-    var shareIcon = document.querySelector(".share-icon");
+    var shareIconButton = document.querySelector(".share-icon-btn");
     var ctaSection = document.querySelector(".cta-section");
-    if (!shareIcon || !ctaSection) {
+    if (!shareIconButton || !ctaSection) {
         console.error("Required elements not found in the DOM.");
         return;
     }
-    shareIcon.addEventListener("click", function () {
+    shareIconButton.addEventListener("click", function () {
         var newComponent = createFooterLinksCTA();
         // Replace the CTA section with the new component
         ctaSection.replaceWith(newComponent);

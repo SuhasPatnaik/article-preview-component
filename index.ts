@@ -20,15 +20,16 @@ function createFooterLinksCTA(): HTMLElement {
 }
 
 function initializeComponentSwap() {
-  const shareIcon = document.querySelector<HTMLImageElement>(".share-icon");
+  const shareIconButton =
+    document.querySelector<HTMLImageElement>(".share-icon-btn");
   const ctaSection = document.querySelector<HTMLElement>(".cta-section");
 
-  if (!shareIcon || !ctaSection) {
+  if (!shareIconButton || !ctaSection) {
     console.error("Required elements not found in the DOM.");
     return;
   }
 
-  shareIcon.addEventListener("click", () => {
+  shareIconButton.addEventListener("click", () => {
     const newComponent = createFooterLinksCTA();
 
     // Replace the CTA section with the new component
